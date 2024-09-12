@@ -78,7 +78,7 @@ def load_numpy_array_data(file_path: str) -> np.array:
         with open(file_path, 'rb') as file_obj:
             return np.load(file_obj)
     except Exception as e:
-        raise USvisaException(e, sys) from e
+        raise USVisaException(e, sys) from e
 
 
 
@@ -94,7 +94,7 @@ def save_object(file_path: str, obj: object) -> None:
         logging.info("Exited the save_object method of utils")
 
     except Exception as e:
-        raise USvisaException(e, sys) from e
+        raise USVisaException(e, sys) from e
 
 
 
@@ -114,4 +114,4 @@ def drop_columns(df: DataFrame, cols: list)-> DataFrame:
         
         return df
     except Exception as e:
-        raise USvisaException(e, sys) from e
+        raise USVisaException(e, sys) from e
